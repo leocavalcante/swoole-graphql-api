@@ -1,5 +1,5 @@
 {
-  "name": "leocavalcante/swoole-graphql-api",
+  "name": "siler-examples/swoole-graphql-api",
   "description": "Building a GraphQL API on top of Swoole.",
   "minimum-stability": "stable",
   "license": "MIT",
@@ -10,12 +10,13 @@
     }
   ],
   "require": {
+    "php": ">=7.4",
     "ext-json": "*",
-    "leocavalcante/siler": "dev-master",
-    "webonyx/graphql-php": "v0.13.6"
+    "leocavalcante/siler": "^1.7",
+    "webonyx/graphql-php": "^v14.1"
   },
   "require-dev": {
-    "swoole/ide-helper": "4.4.3"
+    "swoole/ide-helper": "^4.5"
   },
   "autoload": {
     "files": [

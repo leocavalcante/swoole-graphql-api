@@ -13,10 +13,7 @@ function create_resolvers(Todos $todos)
     return [
         'Query' => [
             'todos' => new Query($todos, new FindAll()),
-            'todo' => function (?array $root, array $args) use ($todos) {
-                // Please, come fast arrow functions!
-                return (new Query($todos, new FindOne($args['id'])))();
-            },
+            'todo' => fn (?array $root, array $args) => (new Query($todos, new FindOne($args['id'])))(),
         ],
         'Mutation' => [
             'saveTodo' => new Save($todos),
